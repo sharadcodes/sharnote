@@ -4,13 +4,13 @@ A command line note taking utility developed in Python that saves notes in JSON 
 # Installation :rocket:
 
 ```bash
-pip install shnote
+pip3 install sharnote
 ```
 
 # Usage
 
 ```bash
-python3 -m shnote This is a dummy note
+python3 -m sharnote This is a dummy note
 ```
 
 #  Flags:
