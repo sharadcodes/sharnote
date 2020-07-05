@@ -1,7 +1,7 @@
-# SharNote :book:
+# SharNote
 A command line note taking utility developed in Python that saves notes in JSON format.
 
-# Installation :rocket:
+# Installation
 
 ```bash
 pip3 install sharnote
@@ -49,7 +49,3 @@ For showing notes of a particaular date
 ```
 sharnote --date 2019-09-27    or    sharnote --d 2019-09-27
 ```
-
----
-
-## Enjoy :smile:
