@@ -5,13 +5,13 @@ with open("README.md", "r") as fh:
 
 setup(
     name='sharnote',
-    version='0.0.4',
+    version='0.0.6',
     author="Sharad Raj Singh Maurya",
     author_email="iamsharadrah@gmail.com",
     url="https://github.com/sharadcodes/sharnote",
     description='A command line note taking utility developed in Python that saves notes in JSON format',
-    long_description=long_description,
     long_description_content_type="text/markdown",
+    long_description=long_description,
     py_modules=['sharnote'],
     package_dir={'': 'src'},
     classifiers=[
