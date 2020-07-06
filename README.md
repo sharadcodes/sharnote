@@ -33,7 +33,7 @@ sharnote --date or --d YYYY-MM-DD
 sharnote --search or --s "Some text here"
 ```
 
-### To change directory used for storing not
+### To change directory used for storing notes
 
 ```
 sharnote --notesdir or --nd
