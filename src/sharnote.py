@@ -93,12 +93,12 @@ def helper():
 
 def main():
     # Get text from argv
-    if sys.argv[1] == "--today" or sys.argv[1] == "--t" or sys.argv[1] == "--date" or sys.argv[1] == "--d" or sys.argv[1] == "--search" or sys.argv[1] == "--s" or sys.argv[1] == "--notesdir" or sys.argv[1] == "--nd" or sys.argv[1] == "--help" or sys.argv[1] == "--h":
+    if len(sys.argv) >= 2 and (sys.argv[1] == "--today" or sys.argv[1] == "--t" or sys.argv[1] == "--date" or sys.argv[1] == "--d" or sys.argv[1] == "--search" or sys.argv[1] == "--s" or sys.argv[1] == "--notesdir" or sys.argv[1] == "--nd" or sys.argv[1] == "--help" or sys.argv[1] == "--h"):
         if sys.argv[1] == "--help" or sys.argv[1] == "--h":
             helper()
         elif sys.argv[1] == "--notesdir" or sys.argv[1] == "--nd":
             check_os(True)
-        elif (sys.argv[1] == "--search" or sys.argv[1] == "--s") and len(sys.argv) == 3:
+        elif len(sys.argv) == 3 and (sys.argv[1] == "--search" or sys.argv[1] == "--s"):
             if (len(sys.argv) > 3):
                 print(
                     "------ sharnote ------\nError!\nSearch string should be inside inverted commas")
@@ -108,7 +108,7 @@ def main():
                 search(sys.argv[2].strip(" "))
         elif sys.argv[1] == "--today" or sys.argv[1] == "--t":
             get_notes(datetime.now().strftime('%Y-%m-%d'))
-        elif (sys.argv[1] == "--date" or sys.argv[1] == "--d") and len(sys.argv) == 3:
+        elif len(sys.argv) == 3 and (sys.argv[1] == "--date" or sys.argv[1] == "--d"):
             get_notes(sys.argv[2])
         else:
             helper()            
@@ -127,6 +127,8 @@ def main():
             tmp_file.close()
             save_note(txt)
             print("Note saved :)")
+    else:
+        helper()
 
 
 if __name__ == "__main__":
