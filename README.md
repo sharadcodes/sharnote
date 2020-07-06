@@ -1,6 +1,7 @@
-# SharNote
-A command line note taking utility developed in Python that saves notes in JSON format.
+![](https://sharadcodes.github.io/logos/sharnote/sharlogo.png)
 
+A command line note taking utility developed in Python that saves notes in JSON format.
+                    
 # Installation
 
 ```
