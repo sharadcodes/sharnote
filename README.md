@@ -10,7 +10,7 @@ pip3 install sharnote
 # Usage
 
 ```bash
-python3 -m sharnote This is a dummy note
+sharnote This is a dummy note
 ```
 
 #  Flags:
@@ -26,7 +26,7 @@ sharnote --help    or    sharnote --h
 For changing notes directory
 ##### Example 
 ```
-sharnote --notedir    or    sharnote --nd
+sharnote --notesdir    or    sharnote --nd
 ```
 
 ### --search or --s

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='sharnote',
-    version='0.0.2',
+    version='0.0.3',
     author="Sharad Raj Singh Maurya",
     author_email="iamsharadrah@gmail.com",
     url="https://github.com/sharadcodes/sharnote",
@@ -21,5 +21,6 @@ setup(
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: OS Independent"
     ],
-    python_requires='>=3.6'
+    python_requires='>=3.6',
+    entry_points={ "console_scripts": ['sharnote=sharnote:main'] }
 )

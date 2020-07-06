@@ -81,38 +81,24 @@ def search(search_key):
 
 
 def helper():
-    print("-------------------------------------------------------------------")
-    print("SharNote    A python based note taking utility")
-    print("Copyright (C) 2020  Sharad Raj Singh Maurya")
-    print("Licensed under the GNU GPL v3.0")
-    print("Github:     https://github.com/sharadcodes")
-    print("Repository: https://github.com/sharadcodes/sharnote\n")
-    print("Available Flags:\n")
-    print("--help or --h")
-    print("For showing help")
-    print("Example:   sharnote --help    or    sharnote --h\n")
-    print("--today or --t")
-    print("For showing today's notes")
-    print("Example:   sharnote --today    or    sharnote --t\n")
-    print("--date or --d")
-    print("For showing notes of a particaular date")
-    print("Example:   sharnote --date 2019-09-27    or    sharnote --d 2019-09-27\n")
-    print("--search or --s")
-    print("For searching and showing notes with the given string")
-    print("Example:   sharnote --search \"Some text here\"    or    sharnote --s \"Some text here\"\n")
-    print("--notedir or --nd")
-    print("For changing the folder where the notes are saved")
-    print("Example:   sharnote --notedir    or    sharnote --nd")
+    print("SharNote is a python based note taking utility")
+    print("Copyright (C) 2020  Sharad Raj Singh Maurya, GNU GPL v3.0\n")
+    print("USAGE:\n")
+    print("sharnote --help or sharnote --h                Shows help")
+    print("sharnote --today or --t                        Shows notes of today")
+    print("sharnote --date or --d YYYY-MM-DD              Shows notes of a particaular date")
+    print("sharnote --search or --s \"Some text here\"      Search for a particular string in notes")
+    print("sharnote --notesdir or --nd                    Change directory used for storing notes")
 
 
 def main():
     # Get text from argv
-    if sys.argv[1] == "--today" or sys.argv[1] == "--t" or sys.argv[1] == "--date" or sys.argv[1] == "--d" or sys.argv[1] == "--search" or sys.argv[1] == "--s" or sys.argv[1] == "--notedir" or sys.argv[1] == "--nd" or sys.argv[1] == "--help" or sys.argv[1] == "--h":
+    if sys.argv[1] == "--today" or sys.argv[1] == "--t" or sys.argv[1] == "--date" or sys.argv[1] == "--d" or sys.argv[1] == "--search" or sys.argv[1] == "--s" or sys.argv[1] == "--notesdir" or sys.argv[1] == "--nd" or sys.argv[1] == "--help" or sys.argv[1] == "--h":
         if sys.argv[1] == "--help" or sys.argv[1] == "--h":
             helper()
-        if sys.argv[1] == "--notedir" or sys.argv[1] == "--nd":
+        elif sys.argv[1] == "--notesdir" or sys.argv[1] == "--nd":
             check_os(True)
-        if sys.argv[1] == "--search" or sys.argv[1] == "--s":
+        elif (sys.argv[1] == "--search" or sys.argv[1] == "--s") and len(sys.argv) == 3:
             if (len(sys.argv) > 3):
                 print(
                     "------ sharnote ------\nError!\nSearch string should be inside inverted commas")
@@ -120,10 +106,12 @@ def main():
                     "Example:   sharnote --search \"Some text here\"    or    sharnote --s \"Some text here\"")
             else:
                 search(sys.argv[2].strip(" "))
-        if sys.argv[1] == "--today" or sys.argv[1] == "--t":
+        elif sys.argv[1] == "--today" or sys.argv[1] == "--t":
             get_notes(datetime.now().strftime('%Y-%m-%d'))
-        if sys.argv[1] == "--date" or sys.argv[1] == "--d":
+        elif (sys.argv[1] == "--date" or sys.argv[1] == "--d") and len(sys.argv) == 3:
             get_notes(sys.argv[2])
+        else:
+            helper()            
     elif len(sys.argv) >= 2 and len(sys.argv[1]) != 0:
         txt = ""
         for word in sys.argv[1:]:
