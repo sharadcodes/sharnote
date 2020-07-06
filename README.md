@@ -3,49 +3,38 @@ A command line note taking utility developed in Python that saves notes in JSON 
 
 # Installation
 
-```bash
+```
 pip3 install sharnote
 ```
 
 # Usage
 
-```bash
-sharnote This is a dummy note
+### For help
+
+```
+sharnote --help or sharnote --h
 ```
 
-#  Flags:
+### To see notes of today
 
-### --help or --h
-For showing help
-##### Example 
 ```
-sharnote --help    or    sharnote --h
+sharnote --today or --t
 ```
 
-### --notedir or --nd
-For changing notes directory
-##### Example 
+### To see notes of a particaular date
+
 ```
-sharnote --notesdir    or    sharnote --nd
+sharnote --date or --d YYYY-MM-DD
 ```
 
-### --search or --s
-For searching in notes
-##### Example 
+### To search for a particular string in notes
+
 ```
-sharnote --search "My search string"    or    sharnote --s "My search string"
+sharnote --search or --s "Some text here"
 ```
 
-### --today or --t
-For showing today's notes
-##### Example
-```
-sharnote --t    or    sharnote --t
-```
+### To change directory used for storing not
 
-### --date or --d
-For showing notes of a particaular date
-##### Example
 ```
-sharnote --date 2019-09-27    or    sharnote --d 2019-09-27
+sharnote --notesdir or --nd
 ```

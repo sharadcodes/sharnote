@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='sharnote',
-    version='0.0.3',
+    version='0.0.4',
     author="Sharad Raj Singh Maurya",
     author_email="iamsharadrah@gmail.com",
     url="https://github.com/sharadcodes/sharnote",
