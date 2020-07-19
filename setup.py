@@ -5,9 +5,9 @@ with open("README.md", "r") as fh:
 
 setup(
     name='sharnote',
-    version='0.0.9',
+    version='0.1.0',
     author="Sharad Raj Singh Maurya",
-    author_email="iamsharadrah@gmail.com",
+    author_email="iamsharadraj@gmail.com",
     url="https://github.com/sharadcodes/sharnote",
     description='A command line note taking utility developed in Python that saves notes in JSON format',
     long_description_content_type="text/markdown",
